@@ -1,0 +1,49 @@
+/* DEFINE COLORS
+---------------------*/
+:root {
+    --main-color: #1D2540;
+}
+
+
+
+/* BODY AND UNIVERSAL
+---------------------*/
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+
+
+/*      HERO
+---------------------*/
+.hero-image {
+    background-image: url("../images/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.hero a {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border-radius: 50px;
+    padding: 0.1em 2em;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0px 10px 10px var(--main-color);
+    white-space: nowrap
+}
+

@@ -1,0 +1,115 @@
+/*       NAV
+---------------------*/
+nav {
+    padding-top: 15px;
+    position: absolute;
+    background-color: white;
+    height: 5em;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0px 10px 10px var(--main-color);
+}
+
+.nav-links {
+    font-size: 2.5em;
+    margin-right: 2.5em;
+    font-weight: bold;
+}
+
+.first-link {
+    margin-left: 2.5em;
+}
+
+.nav-icon {
+    height: 4.6em;
+    position: absolute;
+    left: 1em;
+    top: 0.75em;
+}
+
+.active {
+    border-bottom: 3px solid var(--main-color);
+}
+
+.desktop-nav {
+    display: block;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+
+/*   MEDIA QUERIES
+---------------------*/
+/* SMALL DESKTOP */
+@media screen and (max-width: 1600px) {
+    nav {
+        height: 3em;
+    }
+    .nav-links {
+        font-size: 1.5em;
+    }
+    .nav-icon {
+        height: 3em;
+        left: 1em;
+        top: 0.5em;
+    }
+}
+
+/* TABLET & PHONE */
+@media screen and (max-width: 1000px) {
+    .desktop-nav {
+        display: none;
+    }
+    .mobile-nav {
+        display: block;
+    }
+    #checkbox:checked ~ .drop-down {
+        display: block;
+    }
+    #checkbox {
+        display: none;
+        position: absolute;
+        right: 1em;
+        top: 0.75em;
+        height: 50px;
+        width: 50px;
+    }
+    .drop-down {
+        display: none;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: 2.25em;
+        font-size: 2em;
+        width: 100vw;
+        padding-bottom: 1em;
+        border-bottom: 2px solid var(--main-color);
+        box-shadow: 0px 10px 10px var(--main-color);
+    }
+    .drop-down a{
+        display: block;
+        margin-top: 1em;
+     }
+    .hamburger-icon {
+        position: absolute;
+        right: 1em;
+        top: 0.75em;
+        height: 50px;
+    }
+    .nav-links {
+        font-size: 2em;    
+    }
+    nav {
+        padding-top: 5px;
+        padding-bottom: 20px;
+        height: 3em;
+        border-bottom: 2px solid var(--main-color);
+    }
+    .nav-icon {
+        top: 0.75em;
+    }
+}
