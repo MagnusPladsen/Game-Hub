@@ -13,6 +13,7 @@
 body {
     margin: 0;
     font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
 }
 
 a {
@@ -30,10 +31,8 @@ h2 {
 /*       MAIN
 ---------------------*/
 main {
-    background-color: var(--bg-color);
     position: absolute;
     width: 70vw;
-    height: 2150px;
     text-align: center;
     top: 1em;
     left: 50%;
