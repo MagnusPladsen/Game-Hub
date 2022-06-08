@@ -202,6 +202,7 @@ header a {
 .newsletter {
     position: relative;
     top: 8em;
+    margin-bottom: 6em;
 }
 
 .newsletter p {
@@ -250,9 +251,12 @@ header a {
 
 /* TABLET  */
 @media screen and (max-width: 1000px) {
+    body {
+        background-color: var(--bg-color);
+    }
     main {
         width: 100vw;
-        height: 2350px;
+        height: auto;
         top: 1em;
     }
     .cta-sort {
@@ -273,17 +277,28 @@ header a {
     .game-display img {
         max-width: 15vw;
     }
+    .seperator-line {
+        max-width: 90vw;
+    }
+    .cta-blue {
+        font-size: 1em;
+    }
+    .newsletter input {
+        height: 2em;
+        width: 60vw;
+        font-size: 1.5em;
+    }
 }
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
     main {
-        height: 3200px;
+        height: auto;
     }
     .cta-sort {
         font-size: 1.2em;
-        padding: 1px 20px;
-        margin: 0 2em 0 2em !important;
+        padding: 1px 10px;
+        margin: 0 2em 0 1em !important;
     }
     .sort-price i {
         margin-left: 5px;
@@ -296,14 +311,37 @@ header a {
     .display-container {
         max-width: 80vw;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
     }
     .game-display img {
-        max-width: 20vw;
+        max-width: 35vw;
+    }
+    .game-display {
+        margin-bottom: -3em;
     }
     .sort-buttons {
         margin-bottom: 1em;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 1em;
+        grid-gap: 0.5em;
+        white-space: nowrap;
+    }
+    .sort-price i {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    .search-bar input {
+        margin-top: 0.2em;
+    }
+    .newsletter input {
+        height: 1em;
+        width: 80vw;
+        font-size: 1.5em;
+    }
+    .newsletter p {
+        font-size: 1.5em;
+    }
+    .newsletter {
+        margin-bottom: 10 !important;  /*HVORFOR FUNKER IKKE DETTE????*/
     }
 }
