@@ -1,0 +1,309 @@
+/* DEFINE COLORS
+---------------------*/
+:root {
+    --main-color: #1D2540;
+    --bg-color: #E1E5EA;
+    --border-color: #707070;
+}
+
+
+
+/* BODY AND UNIVERSAL
+---------------------*/
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+
+
+
+/*       MAIN
+---------------------*/
+main {
+    background-color: var(--bg-color);
+    position: absolute;
+    width: 70vw;
+    height: 2150px;
+    text-align: center;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+
+
+/*       CTA
+---------------------*/
+.cta-sort {
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: white;
+    padding: 1px 30px;
+    font-weight: 500;
+}
+
+.cta-sort:hover {
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+}
+
+.sort-price i {
+    margin-left: 10px;
+    margin-right: -5px;
+}
+
+.cta-blue {
+    border-radius: 2em;
+    background-color: var(--main-color);
+    padding: 10px 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.cta-to-top {
+    position: relative;
+    top: 3em;
+}
+
+.cta-to-top:hover {
+    border: 1px solid var(--main-color);
+    background-color: white;
+    color: var(--main-color);
+}
+
+.cta-sign-up {
+    position: relative;
+    top: 2em;
+}
+
+
+
+/*      HEADER
+---------------------*/
+main header {
+    position: relative;
+    top: 5em;
+}
+
+header a {
+    font-size: 25px;
+}
+
+.sort-buttons {
+    margin-bottom: 2em;
+}
+
+.sort-buttons a {
+    margin-right: 1em;
+}
+
+.sort-price {
+    margin-right: 0 !important;
+}
+
+/* SEARCHBAR */
+.search-bar {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background-color: white;
+    padding: 1px 0px;
+    height: 3.5em;
+    max-width: 60vw;
+    margin-bottom: 6em;
+}
+
+.search-bar input {
+    font-size: 25px;
+    border: 0;
+    float: left;
+    margin-top: 0.3em;
+    margin-left: 1em;
+    font-weight: 500;
+    color: var(--main-color);
+    font-family: 'Kanit', sans-serif;
+    letter-spacing: 2px;
+}
+
+.search-bar i {
+    float: right;
+    margin-right: 0.8em;
+    margin-top: 0.8em;
+    width: 1;
+}
+
+.search-bar:hover {
+    border: 1px solid var(--main-color);
+}
+
+
+
+/*   MAIN CONTENT
+---------------------*/
+.display-container {
+    position: relative;
+    max-width: 55vw;
+    left: 50%;
+    transform: translate(-50%);
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.game-display img {
+    max-width: 10vw;
+}
+
+.game-display:hover {
+    opacity: 0.8;
+}
+
+.display-title {
+    font-size: 1.5em;
+    margin-bottom: 0.2em;
+}
+
+.display-price {
+    font-size: 22px;
+    margin-top: 0;
+    padding-right: 0em;
+}
+
+.display-price strong {
+    margin-left: 1.5em;
+    font-size: 1.2em;
+}
+
+
+/* BOTTOM-CONTENT */
+.seperator-line {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 60vw;
+    border: 1px solid var(--main-color);
+    top: 7em;
+}
+
+.newsletter {
+    position: relative;
+    top: 8em;
+}
+
+.newsletter p {
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+.newsletter input {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 2em;
+    width: 27vw;
+    border: 1px solid var(--main-color);
+    border-radius: 2em;
+    text-align: center;
+    font-size: 1.7em;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: block;
+}
+
+
+
+/*   MEDIA QUERIES
+---------------------*/
+/* SMALL DESKTOP */
+@media screen and (max-width: 1300px) {
+    .cta-sort {
+        font-size: 1.1em;
+    }
+    .search-bar {
+        height: 2.5em;
+    }
+    .search-bar input {
+        font-size: 1.1em;
+        margin-top: 0.3em;
+        margin-left: 1em;
+    }
+    .search-bar i {
+        margin-right: 0.8em;
+        margin-top: 0.6em;
+    }
+}
+
+/* TABLET  */
+@media screen and (max-width: 1000px) {
+    main {
+        width: 100vw;
+        height: 2350px;
+        top: 1em;
+    }
+    .cta-sort {
+        font-size: 1.3em;
+    }
+    .search-bar {
+        height: 2.5em;
+        max-width: 90vw;
+    }
+    header h2 {
+        display: none;
+    }
+    .display-container {
+        max-width: 80vw;
+        grid-gap: 1em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .game-display img {
+        max-width: 15vw;
+    }
+}
+
+/* MOBILE  */
+@media screen and (max-width: 790px) {
+    main {
+        height: 3200px;
+    }
+    .cta-sort {
+        font-size: 1.2em;
+        padding: 1px 20px;
+        margin: 0 2em 0 2em !important;
+    }
+    .sort-price i {
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+    .search-bar {
+        height: 2.5em;
+        max-width: 90vw;
+    }
+    .display-container {
+        max-width: 80vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .game-display img {
+        max-width: 20vw;
+    }
+    .sort-buttons {
+        margin-bottom: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+}
