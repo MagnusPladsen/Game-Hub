@@ -1,0 +1,26 @@
+/*      FOOTER
+---------------------*/
+footer {
+    position: fixed;
+    bottom: 0em;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0px 0px 10px var(--main-color);
+}
+
+footer p {
+    font-size: 1.2em;
+    color: var(--main-color);
+    text-align: center;
+}
+
+
+
+/*   MEDIA QUERIES
+---------------------*/
+/* MOBILE  */
+@media screen and (max-width: 790px) {
+    footer p {
+        font-size: 1em;
+    }
+}

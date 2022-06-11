@@ -14,6 +14,7 @@ body {
     margin: 0;
     font-family: 'Kanit', sans-serif;
     background-color: var(--bg-color);
+    overflow-x: hidden;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
     color: var(--main-color);
 }
 
-h2 {
+h1 {
     font-size: 2.5em;
 }
 
@@ -37,6 +38,7 @@ main {
     top: 1em;
     left: 50%;
     transform: translate(-50%);
+
 }
 
 
@@ -202,6 +204,7 @@ header a {
     position: relative;
     top: 8em;
     margin-bottom: 6em;
+    padding-bottom: 7em;
 }
 
 .newsletter p {
@@ -265,7 +268,7 @@ header a {
         height: 2.5em;
         max-width: 90vw;
     }
-    header h2 {
+    header h1 {
         display: none;
     }
     .display-container {
@@ -341,6 +344,6 @@ header a {
         font-size: 1.5em;
     }
     .newsletter {
-        margin-bottom: 10 !important;  /*HVORFOR FUNKER IKKE DETTE????*/
+        padding-bottom: 5em;
     }
 }

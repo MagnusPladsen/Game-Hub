@@ -1,0 +1,115 @@
+/* DEFINE COLORS
+---------------------*/
+:root {
+    --main-color: #1D2540;
+    --bg-color: #E1E5EA;
+    --border-color: #707070;
+}
+
+
+
+/* BODY AND UNIVERSAL
+---------------------*/
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+
+
+/*       MAIN
+---------------------*/
+main {
+    position: absolute;
+    width: 70vw;
+    text-align: center;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+
+
+/*      HEADER
+---------------------*/
+header {
+    position: relative;
+    top: 5em;
+}
+
+
+
+/*      ARTICLE
+---------------------*/
+article {
+    position: relative;
+    top: 4em;
+    font-size: 1.9em;
+    text-align: left;
+}
+
+.logo {
+    position: relative;
+    top: 2.5em;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 20em;
+}
+
+
+
+/*   MEDIA QUERIES
+---------------------*/
+/* SMALL DESKTOP */
+@media screen and (max-width: 1300px) {
+    .logo {
+        max-width: 15em;
+    }
+}
+
+
+
+/* TABLET  */
+@media screen and (max-width: 1000px) {
+    body {
+        background-color: var(--bg-color);
+    }
+    main {
+        width: 90vw;
+        height: auto;
+        top: 1em;
+    }
+    header h1 {
+        display: none;
+    }
+}
+
+
+
+
+/* MOBILE  */
+@media screen and (max-width: 790px) {
+    article {
+        font-size: 1.5em;
+        top: 3em;
+    }
+    article p {
+        padding-bottom: 1em;
+    }
+    .logo {
+        top: 1em;
+        max-width: 10em;
+        padding-bottom: 1em;
+    }
+}
