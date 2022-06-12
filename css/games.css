@@ -237,10 +237,10 @@ header a {
 /* SMALL DESKTOP */
 @media screen and (max-width: 1300px) {
     main header {
-        top: 2em;
+        top: 5em;
     }
     section {
-       top: -3em;
+       top: -1em;
     }
     .cta-sort {
         font-size: 1.1em;
@@ -305,9 +305,6 @@ header a {
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
-    main {
-        height: auto;
-    }
     .cta-sort {
         font-size: 1.2em;
         padding: 1px 10px;
