@@ -1,0 +1,209 @@
+/* DEFINE COLORS
+---------------------*/
+:root {
+    --main-color: #1D2540;
+    --bg-color: #E1E5EA;
+    --border-color: #707070;
+}
+
+
+
+/* BODY AND UNIVERSAL
+---------------------*/
+body {
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+
+
+/*       CTA
+---------------------*/
+.cta {
+    position: relative;
+    border-radius: 2em;
+    background-color: var(--main-color);
+    padding: 10px 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.cta-games {
+    top: 12em;
+}
+
+.cta-cart {
+    top: 12em;
+}
+
+.cta:hover {
+    border: 1px solid var(--main-color);
+    background-color: white;
+    color: var(--main-color);
+}
+
+
+
+/*       MAIN
+---------------------*/
+main {
+    position: absolute;
+    width: 70vw;
+    text-align: center;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.logo {
+    position: relative;
+    top: 6em;
+    max-width: 20em;
+}
+
+
+
+/*      HEADER
+---------------------*/
+header {
+    position: relative;
+    top: 5em;
+}
+
+
+
+/*      SECTION
+---------------------*/
+section {
+    position: relative;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 5em;
+    height: 50vh;
+    top: 4em;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+section p {
+    position: relative;
+    font-size: 1.9em;
+    font-weight: 500;
+    top: 5em;
+}
+
+.grid-container {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0em;
+    max-width: 40vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0em;
+    max-height: 30vh;
+}
+
+.left-column {
+    max-width: 20vw;
+}
+
+.left-column img {
+    max-width: 12em;
+}
+
+.left-column p {
+    top: 1em;
+}
+
+.right-column {
+    max-width: 20vw;
+    text-align: left;
+}
+
+.right-column p {
+    top: 2em;
+}
+
+.total {
+    top: 1em;
+}
+
+
+
+
+
+/*   MEDIA QUERIES
+---------------------*/
+/* SMALL DESKTOP */
+@media screen and (max-width: 1300px) {
+    .grid-container {
+        gap: 3em;
+        max-height: 40vh;
+    }
+    section {
+        height: 60vh;
+    }
+
+}
+
+
+
+/* TABLET  */
+@media screen and (max-width: 1000px) {
+    main {
+        width: 100vw;
+    }
+    section {
+        width: 90vw;
+    }
+    .grid-container {
+        max-width: 70vw;
+    }
+    header h1 {
+        display: none;
+    }
+    header {
+        margin-top: 1em;
+    }
+    section p {
+        font-size: 1.3em;
+        top: 2em;
+    }
+    .cta-games {
+        top: 7em;
+    }
+}
+
+
+
+
+/* MOBILE  */
+@media screen and (max-width: 790px) {
+    .left-column img {
+        max-width: 7em;
+    }
+    .left-column p {
+        white-space: nowrap;
+    }
+    .right-column p {
+        top: 4em;
+        font-size: 1em;
+        white-space: nowrap;
+    }
+    .grid-container {
+        gap: 0em;
+        max-height: 40vh;
+    }
+}

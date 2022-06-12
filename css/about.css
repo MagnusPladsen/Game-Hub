@@ -75,7 +75,14 @@ article {
 /* SMALL DESKTOP */
 @media screen and (max-width: 1300px) {
     .logo {
-        max-width: 15em;
+        max-width: 400px;
+        padding-bottom: 5em;
+    }
+    header {
+        top: 2em;
+    }
+    article {
+        top: 1em;
     }
 }
 
@@ -96,6 +103,7 @@ article {
     }
     .logo {
         top: 3em;
+
     }
 }
 

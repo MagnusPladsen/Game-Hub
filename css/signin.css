@@ -85,21 +85,40 @@ textarea {
     resize: none;
 }
 
-.cta-message {
-    border-radius: 1em;
-    border: 1px solid var(--border-color);
+.cta {
+    position: relative;
+    border-radius: 2em;
     font-size: 1.9em;
     color: white;
-    background-color: var(--main-color);
     font-weight: 600;
-    padding: 10px 30px;
+    padding: 10px 70px;
+    margin: 0 1em;
+    top: 3.5em;
 }
 
-.cta-message:hover {
+.cta-signin {
+    border: 1px solid var(--border-color);
+    color: white;
+    background-color: var(--main-color);
+}
+
+.cta-signin:hover {
     border: 1px solid var(--main-color);
     background-color: white;
     color: var(--main-color);
 }
+
+.cta-signup {
+    border: 1px solid var(--border-color);
+    color: var(--main-color);
+    background-color: white;
+}
+
+.cta-signup:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+
 
 
 /*   MEDIA QUERIES
@@ -111,6 +130,7 @@ textarea {
     }
     section {
         top: 1em;
+        max-width: 70vw;
     }
 }
 
@@ -125,7 +145,7 @@ textarea {
         margin-top: 5em;
     }
     section {
-        max-width: 90vw;
+        max-width: 70vw;
     }
     main {
         width: 100vw;
@@ -146,5 +166,14 @@ textarea {
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
-
+    .cta {
+        font-size: 1.3em;
+        top: 2em;
+    }
+    section {
+        max-width: 90vw;
+    }
+    .cta-signin {
+        top: 4em;
+    }
 }

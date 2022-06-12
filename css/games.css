@@ -78,7 +78,8 @@ main {
     top: 3em;
 }
 
-.cta-to-top:hover {
+.cta-to-top:hover,
+.cta-sign-up:hover {
     border: 1px solid var(--main-color);
     background-color: white;
     color: var(--main-color);
@@ -88,6 +89,7 @@ main {
     position: relative;
     top: 2em;
 }
+
 
 
 
@@ -204,7 +206,7 @@ header a {
     position: relative;
     top: 8em;
     margin-bottom: 6em;
-    padding-bottom: 7em;
+    padding-bottom: 10em;
 }
 
 .newsletter p {
@@ -234,6 +236,12 @@ header a {
 ---------------------*/
 /* SMALL DESKTOP */
 @media screen and (max-width: 1300px) {
+    main header {
+        top: 2em;
+    }
+    section {
+       top: -3em;
+    }
     .cta-sort {
         font-size: 1.1em;
     }
@@ -248,6 +256,9 @@ header a {
     .search-bar i {
         margin-right: 0.8em;
         margin-top: 0.6em;
+    }
+    .newsletter {
+        padding-bottom: 10em;
     }
 }
 
@@ -342,8 +353,5 @@ header a {
     }
     .newsletter p {
         font-size: 1.5em;
-    }
-    .newsletter {
-        padding-bottom: 5em;
     }
 }
