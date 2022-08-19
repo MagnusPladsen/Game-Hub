@@ -45,7 +45,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 
@@ -54,7 +54,7 @@ header {
 ---------------------*/
 article {
     position: relative;
-    top: 4em;
+    top: 2em;
     font-size: 1.9em;
     text-align: left;
 }

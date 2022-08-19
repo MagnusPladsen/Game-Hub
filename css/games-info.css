@@ -78,7 +78,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 
@@ -90,7 +90,7 @@ section {
     background-color: white;
     border: 1px solid var(--border-color);
     border-radius: 5em;
-    height: 50vh;
+    max-height: 60vh;
     top: 4em;
     left: 50%;
     transform: translate(-50%);
@@ -112,7 +112,7 @@ section p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0em;
-    max-height: 30vh;
+    /* max-height: 30vh; */
 }
 
 .left-column {

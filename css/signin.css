@@ -46,7 +46,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 
@@ -55,7 +55,7 @@ header {
 ---------------------*/
 section {
     position: relative;
-    top: 4em;
+    top: 2em;
     max-width: 40vw;
     left: 50%;
     transform: translate(-50%);

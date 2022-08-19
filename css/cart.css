@@ -79,7 +79,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 
@@ -92,7 +92,7 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 5em;
     height: 50vh;
-    top: 4em;
+    top: 2em;
     left: 50%;
     transform: translate(-50%);
 }

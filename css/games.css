@@ -46,6 +46,7 @@ main {
 /*       CTA
 ---------------------*/
 .cta-sort {
+    font-size: 1.2em;
     border: 1px solid var(--border-color);
     border-radius: 20px;
     background-color: white;
@@ -56,7 +57,7 @@ main {
 .cta-sort:hover {
     background-color: var(--main-color);
     color: white;
-    border: 0;
+    border: 1px solid var(--main-color);
 }
 
 .sort-price i {
@@ -70,7 +71,7 @@ main {
     padding: 10px 40px;
     color: white;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .cta-to-top {
@@ -97,7 +98,7 @@ main {
 ---------------------*/
 main header {
     position: relative;
-    top: 5em;
+    top: 3em;
 }
 
 header a {
@@ -134,12 +135,14 @@ header a {
     font-size: 25px;
     border: 0;
     float: left;
-    margin-top: 0.3em;
+    margin-top: 0.6em;
     margin-left: 1em;
     font-weight: 500;
     color: var(--main-color);
     font-family: 'Kanit', sans-serif;
     letter-spacing: 2px;
+    font-size: 1.2em;
+    width: 90%;
 }
 
 .search-bar i {
@@ -151,6 +154,10 @@ header a {
 
 .search-bar:hover {
     border: 1px solid var(--main-color);
+}
+
+.search-bar input:focus {
+    outline: none !important;
 }
 
 
@@ -181,7 +188,7 @@ header a {
 }
 
 .display-price {
-    font-size: 22px;
+    font-size: 1.2em;
     margin-top: 0;
     padding-right: 0em;
 }
@@ -223,7 +230,7 @@ header a {
     border: 1px solid var(--main-color);
     border-radius: 2em;
     text-align: center;
-    font-size: 1.7em;
+    font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
     letter-spacing: 2px;
