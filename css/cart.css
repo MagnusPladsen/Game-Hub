@@ -36,7 +36,7 @@ h1 {
     padding: 10px 40px;
     color: white;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .cta-games {
@@ -44,7 +44,7 @@ h1 {
 }
 
 .cta-payment {
-    top: 1em;
+    top: -3em;
 }
 
 .cta:hover {
@@ -64,7 +64,6 @@ main {
     top: 1em;
     left: 50%;
     transform: translate(-50%);
-
 }
 
 .logo {
@@ -79,7 +78,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 
@@ -92,17 +91,20 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 5em;
     height: 50vh;
-    top: 2em;
+    top: 3em;
     left: 50%;
     transform: translate(-50%);
+    width: 50vw;
 }
 
 section p {
     position: relative;
-    font-size: 1.9em;
+    font-size: 1.5em;
     font-weight: 500;
     top: 5em;
+    margin-bottom: 5em;
 }
+
 
 .grid-container {
     position: relative;
@@ -121,11 +123,14 @@ section p {
 }
 
 .left-column img {
-    max-width: 12em;
+    position: relative;
+    max-width: 15em;
+    top: -6em;
 }
 
 .left-column p {
-    top: 1em;
+    top: 0em;
+    font-weight: 600;
 }
 
 .right-column {
@@ -138,7 +143,10 @@ section p {
 }
 
 .total {
-    top: 1em;
+    top: 2em;
+    text-decoration: underline;
+    text-underline-offset: .3em;
+    font-size: 1.8em;
 }
 
 
@@ -168,6 +176,7 @@ section p {
     }
     section {
         width: 90vw;
+        top: 6em;
     }
     .grid-container {
         max-width: 70vw;
@@ -193,18 +202,41 @@ section p {
 /* MOBILE  */
 @media screen and (max-width: 790px) {
     .left-column img {
-        max-width: 7em;
+        max-width: 12em;
+        margin-top: 0em;
     }
-    .left-column p {
-        white-space: nowrap;
+    .left-column {
+       max-width: 70vw;
+       height: 35vh;
+    }
+    .right-column {
+        max-width: 70vw;
+        height: 35vh;
     }
     .right-column p {
-        top: 4em;
+        margin-top: -1em;
         font-size: 1em;
-        white-space: nowrap;
+        width: 70vw;
     }
     .grid-container {
-        gap: 0em;
-        max-height: 40vh;
+        gap: 0;
+        /* max-height: 40vh; */
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+    section {
+        height: 80vh;
+        top: 4em;
+    }
+    .section-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70vw;
+        gap: 1em;
+        margin: 0 auto;
+    }
+    .cta {
+        padding: 10px 30px !important;
+        top: 0em;
     }
 }

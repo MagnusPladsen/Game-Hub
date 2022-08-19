@@ -98,7 +98,7 @@ main {
 ---------------------*/
 main header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 header a {
@@ -146,9 +146,8 @@ header a {
 }
 
 .search-bar i {
-    float: right;
-    margin-right: 0.8em;
-    margin-top: 0.8em;
+    position: absolute;
+    top: .9em;
     width: 1;
 }
 
@@ -221,6 +220,12 @@ header a {
     font-weight: 500;
 }
 
+label {
+    font-size: 1.2em;
+    margin-bottom: -1em;
+    font-weight: 600;
+}
+
 .newsletter input {
     position: relative;
     left: 50%;
@@ -261,8 +266,8 @@ header a {
         margin-left: 1em;
     }
     .search-bar i {
-        margin-right: 0.8em;
-        margin-top: 0.6em;
+        top: .7em;
+        right: .5em;
     }
     .newsletter {
         padding-bottom: 10em;

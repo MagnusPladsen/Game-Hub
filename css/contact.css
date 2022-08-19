@@ -46,7 +46,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 
@@ -55,8 +55,8 @@ header {
 ---------------------*/
 section {
     position: relative;
-    top: 2em;
-    max-width: 40vw;
+    top: 3em;
+    max-width: 30vw;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
@@ -68,27 +68,32 @@ form {
     gap: 1.5em;
 }
 
+label {
+    font-size: 1.2em;
+    margin-bottom: -1em;
+    font-weight: 600;
+}
+
 input,
 textarea {
     border-radius: 1em;
     border: 1px solid var(--border-color);
     padding: 5px;
     text-align: center;
-    font-size: 1.9em;
+    font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
     color: var(--border-color);
 }
 
 textarea {
-    padding-bottom: 5em;
+    height: 12em;
     margin-bottom: 1.5em;
-    resize: none;
 }
 
 .cta-message {
-    border-radius: 1em;
+    border-radius: 2em;
     border: 1px solid var(--border-color);
-    font-size: 1.9em;
+    font-size: 1.2em;
     color: white;
     background-color: var(--main-color);
     font-weight: 600;

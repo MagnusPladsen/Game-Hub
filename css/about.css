@@ -45,7 +45,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 
@@ -54,9 +54,11 @@ header {
 ---------------------*/
 article {
     position: relative;
-    top: 2em;
-    font-size: 1.9em;
+    top: 3em;
+    font-size: 1.5em;
     text-align: left;
+    width: 40vw;
+    margin: 0 auto;
 }
 
 .logo {
@@ -96,14 +98,16 @@ article {
     main {
         width: 90vw;
         height: auto;
-        top: 0em;
+        top: 2em;
     }
     header h1 {
         display: none;
     }
     .logo {
         top: 3em;
-
+    }
+    article {
+        width: 80vw;
     }
 }
 

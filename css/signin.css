@@ -46,7 +46,7 @@ main {
 ---------------------*/
 header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 
@@ -55,11 +55,15 @@ header {
 ---------------------*/
 section {
     position: relative;
-    top: 2em;
-    max-width: 40vw;
+    top: 4em;
+    max-width: 30vw;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
+}
+
+section p {
+    font-size: 1.5em;
 }
 
 form {
@@ -68,13 +72,19 @@ form {
     gap: 1.5em;
 }
 
+label {
+    font-size: 1.2em;
+    margin-bottom: -1em;
+    font-weight: 600;
+}
+
 input,
 textarea {
     border-radius: 1em;
     border: 1px solid var(--border-color);
     padding: 5px;
     text-align: center;
-    font-size: 1.9em;
+    font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
     color: var(--border-color);
 }
@@ -88,10 +98,10 @@ textarea {
 .cta {
     position: relative;
     border-radius: 2em;
-    font-size: 1.9em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
-    padding: 10px 70px;
+    padding: 8px 50px;
     margin: 0 1em;
     top: 3.5em;
 }
@@ -155,10 +165,6 @@ textarea {
         padding: 5px;
         font-size: 1.3em;
     }
-    .cta-message {
-        font-size: 1.3em;
-        padding: 10px 20px;
-    }
 }
 
 
@@ -167,11 +173,15 @@ textarea {
 /* MOBILE  */
 @media screen and (max-width: 790px) {
     .cta {
-        font-size: 1.3em;
         top: 2em;
+        padding: 8px 20px !important;
     }
     section {
         max-width: 90vw;
+    }
+    .cta-section {
+        display: grid;
+        grid-template-columns: 1fr;
     }
     .cta-signin {
         top: 4em;

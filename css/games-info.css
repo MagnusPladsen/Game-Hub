@@ -36,21 +36,27 @@ h1 {
     padding: 10px 40px;
     color: white;
     font-weight: 500;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    border: 1px solid var(--border-color);
+    top: -3em;
 }
 
 .cta-games {
-    top: 12em;
+    border: 1px solid var(--border-color);
+    color: var(--main-color);
+    background-color: white;
 }
 
-.cta-cart {
-    top: 12em;
-}
 
-.cta:hover {
+.cta-cart:hover {
     border: 1px solid var(--main-color);
     background-color: white;
     color: var(--main-color);
+}
+
+.cta-games:hover {
+    color: white;
+    background-color: var(--main-color);
 }
 
 
@@ -72,13 +78,21 @@ main {
     max-width: 20em;
 }
 
+.section-footer {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+
+
 
 
 /*      HEADER
 ---------------------*/
 header {
     position: relative;
-    top: 3em;
+    top: 4em;
 }
 
 
@@ -90,15 +104,16 @@ section {
     background-color: white;
     border: 1px solid var(--border-color);
     border-radius: 5em;
-    max-height: 60vh;
+    height: 60vh;
     top: 4em;
     left: 50%;
     transform: translate(-50%);
+    width: 50vw;
 }
 
 section p {
     position: relative;
-    font-size: 1.9em;
+    font-size: 1.5em;
     font-weight: 500;
     top: 5em;
 }
@@ -112,7 +127,7 @@ section p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0em;
-    /* max-height: 30vh; */
+    height: 50vh;
 }
 
 .left-column {
@@ -120,11 +135,12 @@ section p {
 }
 
 .left-column img {
-    max-width: 12em;
+    max-width: 15em;
 }
 
-.left-column p {
-    top: 1em;
+.left-column img {
+    position: relative;
+    top: 5em;
 }
 
 .right-column {
@@ -140,6 +156,9 @@ section p {
     top: 1em;
 }
 
+.game-description {
+    font-weight: 400;
+}
 
 
 
@@ -192,18 +211,40 @@ section p {
 /* MOBILE  */
 @media screen and (max-width: 790px) {
     .left-column img {
-        max-width: 7em;
+        max-width: 12em;
+        margin-top: -3em;
     }
-    .left-column p {
-        white-space: nowrap;
+    .left-column {
+       max-width: 70vw;
+       height: 35vh;
+    }
+    .right-column {
+        max-width: 70vw;
+        height: 35vh;
     }
     .right-column p {
-        top: 4em;
+        margin-top: -1em;
         font-size: 1em;
-        white-space: nowrap;
+        width: 70vw;
     }
     .grid-container {
-        gap: 0em;
-        max-height: 40vh;
+        gap: 0;
+        /* max-height: 40vh; */
+        width: 90vw;
+        grid-template-columns: 1fr;
+    }
+    section {
+        height: 80vh;
+    }
+    .section-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70vw;
+        gap: 1em;
+        margin: 0 auto;
+    }
+    .cta {
+        padding: 10px 30px !important;
+        top: 10em;
     }
 }
