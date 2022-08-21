@@ -130,7 +130,7 @@ textarea {
         margin-top: 5em;
     }
     section {
-        max-width: 90vw;
+        max-width: 70vw;
     }
     main {
         width: 100vw;
@@ -151,5 +151,7 @@ textarea {
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
-
+    section {
+        max-width: 80vw;
+    }
 }

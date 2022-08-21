@@ -114,7 +114,6 @@ section {
 section p {
     position: relative;
     font-size: 1.5em;
-    font-weight: 500;
     top: 5em;
 }
 
@@ -160,6 +159,10 @@ section p {
     font-weight: 400;
 }
 
+.bold {
+    font-weight: 600 !important;
+}
+
 
 
 
@@ -202,6 +205,17 @@ section p {
     }
     .cta-games {
         top: 7em;
+    }
+    .section-footer {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 30vw;
+        gap: 3em;
+        margin: 0 auto;
+    }
+    .right-column {
+        max-width: 70vw;
+        height: 35vh;
     }
 }
 

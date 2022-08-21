@@ -91,7 +91,7 @@ section {
     border: 1px solid var(--border-color);
     border-radius: 5em;
     height: 50vh;
-    top: 3em;
+    top: 4em;
     left: 50%;
     transform: translate(-50%);
     width: 50vw;
@@ -100,7 +100,6 @@ section {
 section p {
     position: relative;
     font-size: 1.5em;
-    font-weight: 500;
     top: 5em;
     margin-bottom: 5em;
 }
@@ -125,11 +124,11 @@ section p {
 .left-column img {
     position: relative;
     max-width: 15em;
-    top: -6em;
+    top: -5em;
 }
 
 .left-column p {
-    top: 0em;
+    top: 1.5em;
     font-weight: 600;
 }
 
@@ -140,6 +139,7 @@ section p {
 
 .right-column p {
     top: 2em;
+    margin-top: 5em;
 }
 
 .total {
@@ -147,8 +147,18 @@ section p {
     text-decoration: underline;
     text-underline-offset: .3em;
     font-size: 1.8em;
+    font-weight: 600;
 }
 
+.display-title {
+    font-weight: 600;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: 600 !important;
+}
 
 
 
@@ -194,6 +204,9 @@ section p {
     .cta-games {
         top: 7em;
     }
+    .right-column p {
+        margin-top: 5em;
+    }
 }
 
 
@@ -204,10 +217,13 @@ section p {
     .left-column img {
         max-width: 12em;
         margin-top: 0em;
+        top: -5em;
     }
     .left-column {
        max-width: 70vw;
        height: 35vh;
+       top: -3em;
+       position: relative;
     }
     .right-column {
         max-width: 70vw;
