@@ -1,4 +1,4 @@
-games = {
+const games = {
   "01": {
     name: "Assassin",
     platform: "Playblox",

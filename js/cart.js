@@ -1,20 +1,36 @@
+import { games } from "./gamesData.js";
+
+console.log(games)
+
 const gamesInCart = document.querySelector(".games-in-cart");
 
 const cart = [];
 
 function addToCart(productId) {
   cart.push(productId);
+  window.localStorage.setItem("cart", JSON.stringify(cart));
+  const newCart = window.localStorage.getItem("cart");
+  console.log("newCart", newCart);
 }
 
-function showCart() {
-  return cart;
+function getCart() {
+  const newCart = window.localStorage.getItem("cart");
+  return newCart;
 }
-
-console.log("cart.js", cart);
 
 if (gamesInCart) {
-  gamesInCart.innerHTML += cart.length;
+  const updatedCart = JSON.parse(getCart());
+  updatedCart.forEach(gameId => {
+    const game = games[gameId];
+    console.log(game)
+    gamesInCart.innerHTML += `<div class="game-in-cart">
+    <h3>${game.name}</h3>
+    <img class="game-in-cart-image" src="${game.image}" alt="${game.name}">
+    </div>`
+  })
 }
+
+
 
 
 export { addToCart, cart };

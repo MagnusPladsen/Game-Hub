@@ -160,6 +160,13 @@ section p {
     font-weight: 600 !important;
 }
 
+.game-in-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
