@@ -8,13 +8,13 @@ const cart = [];
 
 function addToCart(productId) {
   cart.push(productId);
-  window.localStorage.setItem("cart", JSON.stringify(cart));
+  sessionStorage.setItem("cart", JSON.stringify(cart));
   const newCart = window.localStorage.getItem("cart");
   console.log("newCart", newCart);
 }
 
 function getCart() {
-  const newCart = window.localStorage.getItem("cart");
+  const newCart = sessionStorage.getItem("cart");
   return newCart;
 }
 
