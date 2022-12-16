@@ -52,11 +52,13 @@ h1 {
     border: 1px solid var(--main-color);
     background-color: white;
     color: var(--main-color);
+    cursor: pointer;
 }
 
 .cta-games:hover {
     color: white;
     background-color: var(--main-color);
+    cursor: pointer;
 }
 
 

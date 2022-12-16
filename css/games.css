@@ -58,6 +58,7 @@ main {
     background-color: var(--main-color);
     color: white;
     border: 1px solid var(--main-color);
+    cursor: pointer;
 }
 
 .sort-price i {

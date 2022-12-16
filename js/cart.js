@@ -6,11 +6,17 @@ const gamesInCart = document.querySelector(".games-in-cart");
 
 const cart = [];
 
+if (sessionStorage.getItem("cart")) {
+  const getCart = JSON.parse(sessionStorage.getItem("cart"));
+  cart.push(...getCart);
+  console.log("cart", cart);
+}
+
 function addToCart(productId) {
   cart.push(productId);
   sessionStorage.setItem("cart", JSON.stringify(cart));
-  const newCart = window.localStorage.getItem("cart");
-  console.log("newCart", newCart);
+  console.log(window.sessionStorage.getItem("cart"));
+  console.log("cart", cart);
 }
 
 function getCart() {

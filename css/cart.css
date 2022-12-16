@@ -33,6 +33,7 @@ h1 {
   color: white;
   font-weight: 500;
   font-size: 1.2em;
+  border: 1px solid var(--main-color);
 }
 
 .cta-games {
@@ -47,6 +48,7 @@ h1 {
   border: 1px solid var(--main-color);
   background-color: white;
   color: var(--main-color);
+  cursor: pointer;
 }
 
 /*       MAIN
@@ -150,7 +152,10 @@ section p {
 }
 
 .games-in-cart {
-    margin-top: 2em;
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .game-in-cart {
@@ -163,6 +168,7 @@ section p {
   border: 1px solid var(--border-color);
   padding: 1em;
   border-radius: 1em;
+  background-color: white;
 }
 
 .game-in-cart p {
@@ -206,6 +212,7 @@ section p {
 
 .game-in-cart-button {
   font-size: 1em;
+  padding: 10px 20px;
 }
 
 /*   MEDIA QUERIES
