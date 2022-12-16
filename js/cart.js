@@ -20,12 +20,25 @@ function getCart() {
 
 if (gamesInCart) {
   const updatedCart = JSON.parse(getCart());
+  gamesInCart.innerHTML = "";
   updatedCart.forEach(gameId => {
     const game = games[gameId];
     console.log(game)
-    gamesInCart.innerHTML += `<div class="game-in-cart">
-    <h3>${game.name}</h3>
-    <img class="game-in-cart-image" src="${game.image}" alt="${game.name}">
+    gamesInCart.innerHTML += `
+    <div class="game-in-cart">
+      <div class="game-in-cart-image">
+        <img src="${game.image}" alt="${game.name}">
+      </div>
+      <div class="game-in-cart-info">
+        <div class="game-in-cart-info-row1">
+          <h3 class="game-in-cart-title">${game.name}</h3>
+          <p class="game-in-cart-description">${game.description}</p>
+        </div>
+        <div class="game-in-cart-info-row2">
+          <p class="game-in-cart-price">${game.price}</p>
+          <button class="game-in-cart-button cta">Remove</button>
+        </div>
+      </div>
     </div>`
   })
 }
