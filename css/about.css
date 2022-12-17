@@ -1,73 +1,25 @@
-/* DEFINE COLORS
----------------------*/
-:root {
-    --main-color: #1D2540;
-    --bg-color: #E1E5EA;
-    --border-color: #707070;
-}
-
-
-
-/* BODY AND UNIVERSAL
----------------------*/
-body {
-    margin: 0;
-    font-family: 'Kanit', sans-serif;
-    background-color: var(--bg-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-
-
 /*       MAIN
 ---------------------*/
 main {
-    position: absolute;
     width: 70vw;
     text-align: center;
-    top: 1em;
-    left: 50%;
-    height: 140vh;
-    transform: translate(-50%);
-
+    margin: 0 auto;
+    height: 100vh;
 }
-
-
-
-/*      HEADER
----------------------*/
-header {
-    position: relative;
-    top: 4em;
-}
-
 
 
 /*      ARTICLE
 ---------------------*/
 article {
-    position: relative;
-    top: 3em;
     font-size: 1.5em;
     text-align: left;
-    width: 40vw;
+    width: 50vw;
     margin: 0 auto;
 }
 
 .logo {
-    position: relative;
-    top: 2.5em;
-    left: 50%;
-    transform: translate(-50%);
     max-width: 15em;
+    margin: 0 auto;
 }
 
 

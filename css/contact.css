@@ -1,32 +1,3 @@
-/* DEFINE COLORS
----------------------*/
-:root {
-    --main-color: #1D2540;
-    --bg-color: #E1E5EA;
-    --border-color: #707070;
-}
-
-
-
-/* BODY AND UNIVERSAL
----------------------*/
-body {
-    margin: 0;
-    font-family: 'Kanit', sans-serif;
-    background-color: var(--bg-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--main-color);
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-
-
 /*       MAIN
 ---------------------*/
 main {
@@ -41,32 +12,19 @@ main {
 }
 
 
-
-
-/*      HEADER
----------------------*/
-header {
-    position: relative;
-    top: 4em;
-}
-
-
-
 /*      SECTION
 ---------------------*/
 section {
-    position: relative;
-    top: 3em;
     max-width: 30vw;
-    left: 50%;
-    transform: translate(-50%);
     text-align: center;
+    margin: 0 auto;
 }
 
 form {
     position: relative;
     display: grid;
     gap: 1.5em;
+    margin-bottom: 2em;
 }
 
 label {
@@ -82,29 +40,12 @@ textarea {
     padding: 5px;
     text-align: center;
     font-size: 1.2em;
-    font-family: 'Kanit', sans-serif;
-    color: var(--border-color);
+    font-family: 'Kanit', sans-serif;    background-color: var(--bg-color);
 }
 
 textarea {
     height: 12em;
     margin-bottom: 1.5em;
-}
-
-.cta-message {
-    border-radius: 2em;
-    border: 1px solid var(--border-color);
-    font-size: 1.2em;
-    color: white;
-    background-color: var(--main-color);
-    font-weight: 600;
-    padding: 10px 30px;
-}
-
-.cta-message:hover {
-    border: 1px solid var(--main-color);
-    background-color: white;
-    color: var(--main-color);
 }
 
 

@@ -1,0 +1,113 @@
+/* DEFINE COLORS
+---------------------*/
+:root {
+  --main-color: #1d2540;
+  --bg-color: #e1e5ea;
+  --border-color: #707070;
+}
+
+/* BODY AND UNIVERSAL
+---------------------*/
+body {
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+main {
+  text-align: center;
+  padding-top: 4em;
+  width: 70vw;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid var(--border-color);
+}
+
+/*       CTA
+---------------------*/
+.cta {
+  border-radius: 0.5em;
+  background-color: var(--main-color);
+  padding: 10px 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+  border: 1px solid var(--border-color);
+  top: -3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta:hover {
+  cursor: pointer;
+}
+
+.cta-games {
+  border: 1px solid var(--border-color);
+  color: var(--main-color);
+  background-color: white;
+}
+
+.cta-cart:hover {
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.cta-games:hover {
+  color: white;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+.cta-message {
+  border-radius: 0.5em;
+  border: 1px solid var(--border-color);
+  font-size: 1.2em;
+  color: white;
+  background-color: var(--main-color);
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.cta-message:hover {
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+}
+
+.cta-blue {
+  border-radius: 0.5em;
+  background-color: var(--main-color);
+  padding: 10px 40px;
+  color: white;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.cta-to-top {
+  position: relative;
+  top: 3em;
+}
+
+.cta-to-top:hover,
+.cta-sign-up:hover {
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+}
+
+.cta-sign-up {
+  position: relative;
+  top: 2em;
+}
