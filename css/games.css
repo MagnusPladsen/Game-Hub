@@ -200,6 +200,10 @@ header a {
 
 
 /* BOTTOM-CONTENT */
+.bottom-content {
+    margin-top: 4em;
+}
+
 .seperator-line {
     position: relative;
     left: 50%;
@@ -253,7 +257,7 @@ label {
         top: 5em;
     }
     section {
-       top: -1em;
+       top: 4em;
     }
     .cta-sort {
         font-size: 1.1em;
@@ -363,5 +367,8 @@ label {
     }
     .newsletter p {
         font-size: 1.5em;
+    }
+    .bottom-content {
+        margin-top: 8em;
     }
 }

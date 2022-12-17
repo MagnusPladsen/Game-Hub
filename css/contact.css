@@ -36,6 +36,7 @@ main {
     top: 1em;
     left: 50%;
     transform: translate(-50%);
+    height: 120vh;
 
 }
 

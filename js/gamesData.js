@@ -1,7 +1,7 @@
 const games = {
   "01": {
     name: "Assassin",
-    platform: "Playblox",
+    platform: "Playbox",
     condition: "New",
     ageRating: "16",
     price: 10,
@@ -11,7 +11,7 @@ const games = {
   },
   "02": {
     name: "Black",
-    platform: "Playblox",
+    platform: "Playbox",
     condition: "New",
     ageRating: "18",
     price: 10,
@@ -21,7 +21,7 @@ const games = {
   },
   "03": {
     name: "Cyberpunk",
-    platform: "Playblox",
+    platform: "Playbox",
     condition: "New",
     ageRating: "16",
     price: 10,
@@ -31,7 +31,7 @@ const games = {
   },
   "04": {
     name: "Furious",
-    platform: "Playblox",
+    platform: "Playbox",
     condition: "New",
     ageRating: "16",
     price: 10,
@@ -41,7 +41,7 @@ const games = {
   },
   "05": {
     name: "Ping Pong",
-    platform: "Playblox",
+    platform: "Playbox",
     condition: "New",
     ageRating: "3+",
     price: 10,

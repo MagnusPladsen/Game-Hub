@@ -35,6 +35,7 @@ main {
     text-align: center;
     top: 1em;
     left: 50%;
+    height: 140vh;
     transform: translate(-50%);
 
 }

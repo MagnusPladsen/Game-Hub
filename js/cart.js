@@ -1,7 +1,5 @@
 import { games } from "./gamesData.js";
 
-console.log(games)
-
 const gamesInCart = document.querySelector(".games-in-cart");
 
 const cart = [];
@@ -9,14 +7,12 @@ const cart = [];
 if (sessionStorage.getItem("cart")) {
   const getCart = JSON.parse(sessionStorage.getItem("cart"));
   cart.push(...getCart);
-  console.log("cart", cart);
 }
 
 function addToCart(productId) {
   cart.push(productId);
   sessionStorage.setItem("cart", JSON.stringify(cart));
   console.log(window.sessionStorage.getItem("cart"));
-  console.log("cart", cart);
 }
 
 function getCart() {
@@ -24,13 +20,14 @@ function getCart() {
   return newCart;
 }
 
+// check if we are on the cart page
 if (gamesInCart) {
   const updatedCart = JSON.parse(getCart());
-  gamesInCart.innerHTML = "";
-  updatedCart.forEach(gameId => {
-    const game = games[gameId];
-    console.log(game)
-    gamesInCart.innerHTML += `
+  if (updatedCart != undefined) {
+    gamesInCart.innerHTML = "";
+    updatedCart.forEach((gameId) => {
+      const game = games[gameId];
+      gamesInCart.innerHTML += `
     <div class="game-in-cart">
       <div class="game-in-cart-image">
         <img src="${game.image}" alt="${game.name}">
@@ -41,15 +38,24 @@ if (gamesInCart) {
           <p class="game-in-cart-description">${game.description}</p>
         </div>
         <div class="game-in-cart-info-row2">
-          <p class="game-in-cart-price">${game.price}</p>
-          <button class="game-in-cart-button cta">Remove</button>
+          <p class="game-in-cart-price">$ ${game.price}</p>
+          <button class="game-in-cart-button cta" id="remove-from-cart">Remove</button>
         </div>
       </div>
-    </div>`
-  })
+    </div>`;
+    });
+    const removeFromCartButton = document.getElementById("remove-from-cart");
+    removeFromCartButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      removeFromCart(game.id);
+    });
+  }
 }
 
-
-
+function removeFromCart(productId) {
+  const updatedCart = JSON.parse(getCart());
+  const newCart = updatedCart.filter((gameId) => gameId !== productId);
+  sessionStorage.setItem("cart", JSON.stringify(newCart));
+}
 
 export { addToCart, cart };

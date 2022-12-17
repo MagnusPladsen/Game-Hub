@@ -19,6 +19,8 @@
         <!--    ICONS  -->
         <script src="https://kit.fontawesome.com/16c4bc4c57.js" crossorigin="anonymous"></script>
         <!-- Hotjar Tracking Code for https://gamehub.pladsen.dev/ -->
+        <script type="module" src="../../js/games.js"></script>
+        <script type="module" src="../../js/gamesData.js"></script>
 <script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -39,7 +41,6 @@
             <a href="about.html" class="nav-links">ABOUT</a>
             <a href="contact.html" class="nav-links">CONTACT</a>
             <a href="cart.html" class="nav-links">CART</a>
-            <a href="signin.html" class="nav-links">SIGN IN</a>
         </nav>
         <!--    MOBILE NAV   -->
         <nav class="mobile-nav">
@@ -53,164 +54,13 @@
                 <a href="about.html">ABOUT</a>
                 <a href="contact.html">CONTACT</a>
                 <a href="cart.html">CART</a>
-                <a href="signin.html">SIGN IN</a>
             </div>
         </nav>
         <main>
             <header>
                 <h1>ALL GAMES</h1>
-                <section class="sort-buttons">
-                    <a class="cta-sort">CATEGORY</a>
-                    <a class="cta-sort">PLATFORM</a>
-                    <a class="cta-sort">CONDITION</a>
-                    <a class="cta-sort sort-price">SORT BY PRICE<i class="fa-solid fa-sort"></i></a>
-                </section>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search..">
-                    <i class="fa-solid fa-magnifying-glass fa-2xl"></i>
-                </div>
             </header>
-            <section class="display-container">
-                <div class="game-display ping-pong">
-                    <a href="./games-info/pingpong.html">
-                    <p class="display-title">PingPong</p>
-                    <img src="../images/ping_pong.jpg" alt="Image of the Ping Pong game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/black.html">
-                    <p class="display-title">Black</p>
-                    <img src="../images/black.jpg" alt="Image of the Black game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/furious.html">
-                    <p class="display-title">Furious</p>
-                    <img src="../images/furious.jpg" alt="Image of the Furious game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/assassin.html">
-                    <p class="display-title">Assassin</p>
-                    <img src="../images/assassin.jpg" alt="Image of the Assassin game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/cyberpunk.html">
-                    <p class="display-title">Cyberpunk</p>
-                    <img src="../images/cyberpunk.jpg" alt="Image of the Cyberpunk game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display ping-pong">
-                    <a href="./games-info/pingpong.html">
-                    <p class="display-title">PingPong</p>
-                    <img src="../images/ping_pong.jpg" alt="Image of the Ping Pong game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/black.html">
-                    <p class="display-title">Black</p>
-                    <img src="../images/black.jpg" alt="Image of the Black game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/furious.html">
-                    <p class="display-title">Furious</p>
-                    <img src="../images/furious.jpg" alt="Image of the Furious game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/assassin.html">
-                    <p class="display-title">Assassin</p>
-                    <img src="../images/assassin.jpg" alt="Image of the Assassin game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/cyberpunk.html">
-                    <p class="display-title">Cyberpunk</p>
-                    <img src="../images/cyberpunk.jpg" alt="Image of the Cyberpunk game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display ping-pong">
-                    <a href="./games-info/pingpong.html">
-                    <p class="display-title">PingPong</p>
-                    <img src="../images/ping_pong.jpg" alt="Image of the Ping Pong game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/black.html">
-                    <p class="display-title">Black</p>
-                    <img src="../images/black.jpg" alt="Image of the Black game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/furious.html">
-                    <p class="display-title">Furious</p>
-                    <img src="../images/furious.jpg" alt="Image of the Furious game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/assassin.html">
-                    <p class="display-title">Assassin</p>
-                    <img src="../images/assassin.jpg" alt="Image of the Assassin game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/cyberpunk.html">
-                    <p class="display-title">Cyberpunk</p>
-                    <img src="../images/cyberpunk.jpg" alt="Image of the Cyberpunk game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display ping-pong">
-                    <a href="./games-info/pingpong.html">
-                    <p class="display-title">PingPong</p>
-                    <img src="../images/ping_pong.jpg" alt="Image of the Ping Pong game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/black.html">
-                    <p class="display-title">Black</p>
-                    <img src="../images/black.jpg" alt="Image of the Black game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/furious.html">
-                    <p class="display-title">Furious</p>
-                    <img src="../images/furious.jpg" alt="Image of the Furious game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/assassin.html">
-                    <p class="display-title">Assassin</p>
-                    <img src="../images/assassin.jpg" alt="Image of the Assassin game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
-                <div class="game-display">
-                    <a href="./games-info/cyberpunk.html">
-                    <p class="display-title">Cyberpunk</p>
-                    <img src="../images/cyberpunk.jpg" alt="Image of the Cyberpunk game" />
-                    <p class="display-price">Price: <strong>$10</strong></p>
-                    </a>
-                </div>
+            <section class="display-container" id="games-container">
             </section>
             <section class="bottom-content">
                 <a class="cta-blue cta-to-top" href="#top">TO THE TOP</a>

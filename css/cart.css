@@ -26,7 +26,8 @@ h1 {
 /*       CTA
 ---------------------*/
 .cta {
-  position: relative;
+  width: 10vw;
+  margin: 0 auto;
   border-radius: 2em;
   background-color: var(--main-color);
   padding: 10px 40px;
@@ -34,14 +35,6 @@ h1 {
   font-weight: 500;
   font-size: 1.2em;
   border: 1px solid var(--main-color);
-}
-
-.cta-games {
-  top: 12em;
-}
-
-.cta-payment {
-  top: -3em;
 }
 
 .cta:hover {
@@ -54,98 +47,18 @@ h1 {
 /*       MAIN
 ---------------------*/
 main {
-  position: absolute;
-  width: 70vw;
   text-align: center;
-  top: 1em;
-  left: 50%;
-  transform: translate(-50%);
 }
 
-.logo {
-  position: relative;
-  top: 6em;
-  max-width: 20em;
-}
 
 /*      HEADER
 ---------------------*/
 header {
-  position: relative;
-  top: 4em;
+  padding-top: 4em;
 }
 
 /*      SECTION
 ---------------------*/
-section {
-  position: relative;
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: 5em;
-  height: 50vh;
-  top: 4em;
-  left: 50%;
-  transform: translate(-50%);
-  width: 50vw;
-}
-
-section p {
-  position: relative;
-  font-size: 1.5em;
-  top: 5em;
-  margin-bottom: 5em;
-}
-
-.grid-container {
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  top: 0em;
-  max-width: 40vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0em;
-  max-height: 30vh;
-}
-
-.left-column {
-  max-width: 20vw;
-}
-
-.left-column img {
-  position: relative;
-  max-width: 15em;
-  top: -5em;
-}
-
-.left-column p {
-  top: 1.5em;
-  font-weight: 600;
-}
-
-.right-column {
-  max-width: 20vw;
-  text-align: left;
-}
-
-.right-column p {
-  top: 2em;
-  margin-top: 5em;
-}
-
-.total {
-  top: 2em;
-  text-decoration: underline;
-  text-underline-offset: 0.3em;
-  font-size: 1.8em;
-  font-weight: 600;
-}
-
-.display-title {
-  font-weight: 600;
-  font-size: 1.5em;
-  text-transform: uppercase;
-}
 
 .bold {
   font-weight: 600 !important;
@@ -162,7 +75,7 @@ section p {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  width: 60%;
+  width: 40vw;
   margin: 0 auto;
   gap: 1em;
   border: 1px solid var(--border-color);
@@ -195,6 +108,11 @@ section p {
 .game-in-cart-description {
   text-align: left;
   font-size: 1em;
+}
+
+.game-in-cart-price {
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 .game-in-cart-info-row1 {
