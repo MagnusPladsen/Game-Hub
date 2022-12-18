@@ -2,7 +2,7 @@
 ---------------------*/
 nav {
     padding-top: 15px;
-    position: absolute;
+    position: relative;
     background-color: white;
     height: 5em;
     width: 100vw;
@@ -15,6 +15,7 @@ nav {
     font-size: 2em;
     margin-right: 3em;
     font-weight: bold;
+    opacity: 0.7;
 }
 
 .first-link {
@@ -29,7 +30,8 @@ nav {
 }
 
 .active {
-    border-bottom: 3px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    opacity: 1;
 }
 
 .desktop-nav {

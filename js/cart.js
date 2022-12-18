@@ -22,7 +22,7 @@ function getCart() {
 
 function removeFromCart(gameId) {
   const updatedCart = JSON.parse(getCart());
-  const gameIndex = updatedCart.findIndex(id => id === gameId); 
+  const gameIndex = updatedCart.findIndex(id => id === gameId);
   updatedCart.splice(gameIndex, 1);
   sessionStorage.setItem("cart", JSON.stringify(updatedCart));
   displaycart();

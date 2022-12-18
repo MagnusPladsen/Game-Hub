@@ -14,7 +14,7 @@
 
 .game-display:hover {
     transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .display-title {
@@ -73,8 +73,8 @@ label {
     height: 2em;
     width: 27vw;
     border: 1px solid var(--main-color);
-    border-radius: 2em;
-    text-align: center;
+    border-radius: 0.5em;
+    text-align: left;
     font-size: 1.2em;
     font-family: 'Kanit', sans-serif;
     font-weight: 500;
@@ -86,33 +86,7 @@ label {
 
 /*   MEDIA QUERIES
 ---------------------*/
-/* SMALL DESKTOP */
-@media screen and (max-width: 1300px) {
-    main header {
-        top: 5em;
-    }
-    section {
-       top: 4em;
-    }
-    .cta-sort {
-        font-size: 1.1em;
-    }
-    .search-bar {
-        height: 2.5em;
-    }
-    .search-bar input {
-        font-size: 1.1em;
-        margin-top: 0.3em;
-        margin-left: 1em;
-    }
-    .search-bar i {
-        top: .7em;
-        right: .5em;
-    }
-    .newsletter {
-        padding-bottom: 10em;
-    }
-}
+
 
 /* TABLET  */
 @media screen and (max-width: 1000px) {
@@ -120,16 +94,9 @@ label {
         background-color: var(--bg-color);
     }
     main {
-        width: 100vw;
+        width: 100vw !important;
         height: auto;
         top: 1em;
-    }
-    .cta-sort {
-        font-size: 1.3em;
-    }
-    .search-bar {
-        height: 2.5em;
-        max-width: 90vw;
     }
     header h1 {
         display: none;
@@ -156,19 +123,9 @@ label {
 }
 
 /* MOBILE  */
-@media screen and (max-width: 790px) {
-    .cta-sort {
-        font-size: 1.2em;
-        padding: 1px 10px;
-        margin: 0 2em 0 1em !important;
-    }
-    .sort-price i {
-        margin-left: 5px;
-        margin-right: 0px;
-    }
-    .search-bar {
-        height: 2.5em;
-        max-width: 90vw;
+@media screen and (max-width: 767px) {
+    main {
+        width: 100vw !important;
     }
     .display-container {
         max-width: 80vw;
@@ -181,22 +138,8 @@ label {
     .game-display {
         margin-bottom: -3em;
     }
-    .sort-buttons {
-        margin-bottom: 1em;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5em;
-        white-space: nowrap;
-    }
-    .sort-price i {
-        margin-left: 10px;
-        margin-right: 0px;
-    }
-    .search-bar input {
-        margin-top: 0.2em;
-    }
     .newsletter input {
-        height: 1em;
+        height: 1.5em;
         width: 80vw;
         font-size: 1.5em;
     }
@@ -204,6 +147,6 @@ label {
         font-size: 1.5em;
     }
     .bottom-content {
-        margin-top: 8em;
+        margin-top: 2em;
     }
 }

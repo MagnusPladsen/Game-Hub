@@ -25,7 +25,6 @@ h1 {
 
 main {
   text-align: center;
-  padding-top: 4em;
   width: 70vw;
   text-align: center;
   margin: 0 auto;
@@ -44,7 +43,8 @@ main {
   font-size: 1.2em;
   border: 1px solid var(--border-color);
   top: -3em;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  
 }
 
 .cta:hover {
@@ -55,6 +55,7 @@ main {
   border: 1px solid var(--border-color);
   color: var(--main-color);
   background-color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-cart:hover {
@@ -78,6 +79,7 @@ main {
   background-color: var(--main-color);
   font-weight: 600;
   padding: 10px 30px;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-message:hover {
@@ -93,6 +95,7 @@ main {
   color: white;
   font-weight: 500;
   font-size: 1.2em;
+  transition: all 0.2s ease-in-out;
 }
 
 .cta-to-top {
@@ -110,4 +113,13 @@ main {
 .cta-sign-up {
   position: relative;
   top: 2em;
+}
+
+
+/* MOBILE AND TABLET */
+@media screen and (max-width: 1024px) {
+  main {
+      width: 100vw !important;
+  }
+
 }

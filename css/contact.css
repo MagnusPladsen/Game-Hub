@@ -1,99 +1,84 @@
 /*       MAIN
 ---------------------*/
 main {
-    position: absolute;
-    width: 70vw;
-    text-align: center;
-    top: 1em;
-    left: 50%;
-    transform: translate(-50%);
-    height: 120vh;
-
+  width: 70vw;
+  text-align: center;
 }
-
 
 /*      SECTION
 ---------------------*/
 section {
-    max-width: 30vw;
-    text-align: center;
-    margin: 0 auto;
+  max-width: 30vw;
+  text-align: center;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 form {
-    position: relative;
-    display: grid;
-    gap: 1.5em;
-    margin-bottom: 2em;
+  display: grid;
+  gap: 1.5em;
+  margin-bottom: 2em;
 }
 
 label {
-    font-size: 1.2em;
-    margin-bottom: -1em;
-    font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: -1em;
+  font-weight: 600;
 }
 
 input,
 textarea {
-    border-radius: 0.5em;
-    border: 1px solid var(--border-color);
-    padding: 5px;
-    text-align: center;
-    font-size: 1.2em;
-    font-family: 'Kanit', sans-serif;    background-color: rgba(0, 0, 0, 0);
+  border-radius: 0.5em;
+  border: 1px solid var(--border-color);
+  padding: 5px;
+  text-align: left;
+  font-size: 1.2em;
+  font-family: "Kanit", sans-serif;
+  background-color: rgb(244, 244, 244);
 }
 
 textarea {
-    height: 12em;
-    margin-bottom: 1.5em;
+  height: 10em;
+  margin-bottom: 1.5em;
 }
 
+.error {
+  color: red;
+  margin: 0 0;
+  display: none;
+}
 
 /*   MEDIA QUERIES
 ---------------------*/
-/* SMALL DESKTOP */
-@media screen and (max-width: 1300px) {
-    header {
-        top: 2em;
-    }
-    section {
-        top: 1em;
-    }
-}
-
-
 
 /* TABLET  */
 @media screen and (max-width: 1000px) {
-    header h1 {
-        display: none;
-    }
-    header {
-        margin-top: 5em;
-    }
-    section {
-        max-width: 70vw;
-    }
-    main {
-        width: 100vw;
-    }
-    input,
-    textarea {
-        padding: 5px;
-        font-size: 1.3em;
-    }
-    .cta-message {
-        font-size: 1.3em;
-        padding: 10px 20px;
-    }
+  header h1 {
+    display: none;
+  }
+  header {
+    margin-top: 2em;
+  }
+  section {
+    max-width: 70vw;
+  }
+  main {
+    width: 100vw;
+  }
+  input,
+  textarea {
+    padding: 5px;
+    font-size: 1.3em;
+  }
+  .cta-message {
+    font-size: 1.3em;
+    padding: 10px 20px;
+  }
 }
-
-
-
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
-    section {
-        max-width: 80vw;
-    }
+  section {
+    max-width: 80vw;
+  }
 }

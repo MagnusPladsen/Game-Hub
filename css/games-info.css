@@ -1,160 +1,108 @@
 /*       MAIN
 ---------------------*/
 main {
-    width: 70vw;
-    text-align: center;
-    margin: 0 auto;
-    background-color: white;
-    border: 1px solid var(--border-color);
-    height: 100vh;
+  width: 70vw;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  height: 100vh;
 }
 
 .section-footer {
-    display: flex;
-    justify-content: center;
-    gap: 3em;
-    margin-top: 6em;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+  margin-top: 6em;
 }
-
-
-
-
-
 
 /*      SECTION
 ---------------------*/
 .grid-container {
-    display: flex;
-    gap: 2em;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .left-column {
-    max-width: 20vw;
+  max-width: 20vw;
 }
 
 .left-column img {
-    max-width: 15em;
+  max-width: 15em;
 }
 
 .right-column {
-    max-width: 20vw;
-    text-align: left;
+  max-width: 20vw;
+  text-align: left;
 }
 
 .right-column p {
-    top: 2em;
+  top: 2em;
 }
 
 .total {
-    top: 1em;
+  top: 1em;
 }
 
 .game-description {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .bold {
-    font-weight: 600 !important;
+  font-weight: 600 !important;
 }
-
-
-
 
 /*   MEDIA QUERIES
 ---------------------*/
-/* SMALL DESKTOP */
-@media screen and (max-width: 1300px) {
-    .grid-container {
-        gap: 3em;
-        max-height: 40vh;
-    }
-    section {
-        height: 60vh;
-    }
-
-}
-
-
 
 /* TABLET  */
 @media screen and (max-width: 1000px) {
-    main {
-        width: 100vw;
-    }
-    section {
-        width: 90vw;
-    }
-    .grid-container {
-        max-width: 70vw;
-    }
-    header h1 {
-        display: none;
-    }
-    header {
-        margin-top: 1em;
-    }
-    section p {
-        font-size: 1.3em;
-        top: 2em;
-    }
-    .cta-games {
-        top: 7em;
-    }
-    .section-footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 30vw;
-        gap: 3em;
-        margin: 0 auto;
-    }
-    .right-column {
-        max-width: 70vw;
-        height: 35vh;
-    }
+  main {
+    height: 100vh !important;
+  }
 }
 
-
-
-
-/* MOBILE  */
-@media screen and (max-width: 790px) {
-    .left-column img {
-        max-width: 12em;
-        margin-top: -3em;
-    }
-    .left-column {
-       max-width: 70vw;
-       height: 35vh;
-    }
-    .right-column {
-        max-width: 70vw;
-        height: 35vh;
-    }
-    .right-column p {
-        margin-top: -1em;
-        font-size: 1em;
-        width: 70vw;
-    }
-    .grid-container {
-        gap: 0;
-        /* max-height: 40vh; */
-        width: 90vw;
-        grid-template-columns: 1fr;
-    }
-    section {
-        height: 80vh;
-    }
-    .section-footer {
-        display: grid;
-        grid-template-columns: 1fr;
-        width: 70vw;
-        gap: 1em;
-        margin: 0 auto;
-    }
-    .cta {
-        padding: 10px 30px !important;
-        top: 10em;
-    }
+/* MOBILE AND TABLET */
+@media screen and (max-width: 1000px) {
+  main {
+    height: fit-content;
+  }
+  .display-container {
+    margin: 0 auto;
+  }
+  .left-column {
+    max-width: 70vw;
+  }
+  .right-column {
+    max-width: 70vw;
+    height: fit-content;
+  }
+  .right-column p {
+    font-size: 1em;
+    width: 70vw;
+  }
+  .grid-container {
+    gap: 0;
+    /* max-height: 40vh; */
+    width: 80vw;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 70vw;
+    gap: 1em;
+    padding-top: 2em;
+    padding-bottom: 8em;
+    margin: 0 auto;
+  }
+  .cta {
+    padding: 10px 30px !important;
+  }
 }

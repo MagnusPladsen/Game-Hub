@@ -99,73 +99,29 @@ main {
 @media screen and (max-width: 1000px) {
   main {
     width: 100vw;
+    height: 100vh !important;
   }
   section {
     width: 90vw;
     top: 6em;
   }
-  .grid-container {
-    max-width: 70vw;
-  }
   header h1 {
     display: none;
   }
-  header {
-    margin-top: 1em;
-  }
   section p {
     font-size: 1.3em;
-    top: 2em;
   }
-  .cta-games {
-    top: 7em;
-  }
-  .right-column p {
-    margin-top: 5em;
+  .games-in-cart {
+    width: 90vw;
   }
 }
 
 /* MOBILE  */
 @media screen and (max-width: 790px) {
-  .left-column img {
-    max-width: 12em;
-    margin-top: 0em;
-    top: -5em;
+  .games-in-cart {
+    width: 100vw;
   }
-  .left-column {
-    max-width: 70vw;
-    height: 35vh;
-    top: -3em;
-    position: relative;
-  }
-  .right-column {
-    max-width: 70vw;
-    height: 35vh;
-  }
-  .right-column p {
-    margin-top: -1em;
-    font-size: 1em;
-    width: 70vw;
-  }
-  .grid-container {
-    gap: 0;
-    /* max-height: 40vh; */
+  .game-in-cart {
     width: 90vw;
-    grid-template-columns: 1fr;
-  }
-  section {
-    height: 80vh;
-    top: 4em;
-  }
-  .section-footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 70vw;
-    gap: 1em;
-    margin: 0 auto;
-  }
-  .cta {
-    padding: 10px 30px !important;
-    top: 0em;
   }
 }

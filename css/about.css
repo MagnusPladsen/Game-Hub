@@ -25,42 +25,18 @@ article {
 
 
 
-/*   MEDIA QUERIES
----------------------*/
-/* SMALL DESKTOP */
-@media screen and (max-width: 1300px) {
-    .logo {
-        max-width: 400px;
-        padding-bottom: 5em;
-    }
-    header {
-        top: 2em;
-    }
-    article {
-        top: 1em;
-    }
-}
-
-
 
 /* TABLET  */
 @media screen and (max-width: 1000px) {
     body {
         background-color: var(--bg-color);
     }
-    main {
-        width: 90vw;
-        height: auto;
-        top: 2em;
-    }
     header h1 {
         display: none;
     }
-    .logo {
-        top: 3em;
-    }
     article {
-        width: 80vw;
+        width: 70vw;
+        margin-top: 2em;
     }
 }
 
@@ -70,19 +46,14 @@ article {
 /* MOBILE  */
 @media screen and (max-width: 790px) {
     body {
-        height: auto;
+        height: 100vw;
     }
     article {
-        top: 3em;
+        margin-top: 2em;
     }
     article p {
         padding-bottom: 1em;
-        font-size: 0.7em;
-    }
-    .logo {
-        top: 1em;
-        max-width: 10em;
-        padding-bottom: 1em;
+        font-size: 1    em;
     }
     footer p {
         font-size: 1em;

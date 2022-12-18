@@ -45,5 +45,16 @@ a {
     font-weight: bold;
     box-shadow: 0px 10px 10px var(--main-color);
     white-space: nowrap;
+    transition: all 0.3s ease-in-out;
 }
 
+.hero a:hover {
+    cursor: pointer;
+    transform: translate(-50%) scale(1.1);
+    color: white;
+    background-color: var(--main-color);
+}
+
+input {
+    display: none;
+}
