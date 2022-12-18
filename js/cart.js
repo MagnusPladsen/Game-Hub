@@ -20,14 +20,23 @@ function getCart() {
   return newCart;
 }
 
-// check if we are on the cart page
-if (gamesInCart) {
+function removeFromCart(gameId) {
   const updatedCart = JSON.parse(getCart());
-  if (updatedCart != undefined) {
-    gamesInCart.innerHTML = "";
-    updatedCart.forEach((gameId) => {
-      const game = games[gameId];
-      gamesInCart.innerHTML += `
+  const gameIndex = updatedCart.findIndex(id => id === gameId); 
+  updatedCart.splice(gameIndex, 1);
+  sessionStorage.setItem("cart", JSON.stringify(updatedCart));
+  displaycart();
+}
+
+// check if we are on the cart page
+function displaycart() {
+  if (gamesInCart) {
+    const updatedCart = JSON.parse(getCart());
+    if (updatedCart != undefined) {
+      gamesInCart.innerHTML = "";
+      updatedCart.forEach((gameId) => {
+        const game = games[gameId];
+        gamesInCart.innerHTML += `
     <div class="game-in-cart">
       <div class="game-in-cart-image">
         <img src="${game.image}" alt="${game.name}">
@@ -39,23 +48,24 @@ if (gamesInCart) {
         </div>
         <div class="game-in-cart-info-row2">
           <p class="game-in-cart-price">$ ${game.price}</p>
-          <button class="game-in-cart-button cta" id="remove-from-cart">Remove</button>
+          <button class="game-in-cart-button cta remove-from-cart" id="${gameId}">Remove</button>
         </div>
       </div>
     </div>`;
-    });
-    const removeFromCartButton = document.getElementById("remove-from-cart");
-    removeFromCartButton.addEventListener("click", function (e) {
-      e.preventDefault();
-      removeFromCart(game.id);
+      });
+    }
+    const removeFromCartButton =
+      document.getElementsByClassName("remove-from-cart");
+    Array.from(removeFromCartButton).forEach((button) => {
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(e.target.id);
+        removeFromCart(e.target.id);
+      });
     });
   }
 }
 
-function removeFromCart(productId) {
-  const updatedCart = JSON.parse(getCart());
-  const newCart = updatedCart.filter((gameId) => gameId !== productId);
-  sessionStorage.setItem("cart", JSON.stringify(newCart));
-}
+displaycart();
 
 export { addToCart, cart };

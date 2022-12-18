@@ -35,12 +35,12 @@ label {
 
 input,
 textarea {
-    border-radius: 1em;
+    border-radius: 0.5em;
     border: 1px solid var(--border-color);
     padding: 5px;
     text-align: center;
     font-size: 1.2em;
-    font-family: 'Kanit', sans-serif;    background-color: var(--bg-color);
+    font-family: 'Kanit', sans-serif;    background-color: rgba(0, 0, 0, 0);
 }
 
 textarea {
