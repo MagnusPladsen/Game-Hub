@@ -45,6 +45,6 @@ if (gameContainer) {
     ${game.name.toUpperCase()}`
   addToCartButton.addEventListener("click", function (e) {
     e.preventDefault();
-    addToCart(gameId);
+    addToCart(gameId, addToCartButton);
   });
 }

@@ -9,10 +9,15 @@ if (sessionStorage.getItem("cart")) {
   cart.push(...getCart);
 }
 
-function addToCart(productId) {
+function addToCart(productId, buttonElement) {
   cart.push(productId);
   sessionStorage.setItem("cart", JSON.stringify(cart));
   console.log(window.sessionStorage.getItem("cart"));
+  buttonElement.innerHTML = `Added to Cart!`;
+  buttonElement.style.backgroundColor = "gray";
+  buttonElement.style.cursor = "default";
+  buttonElement.style.pointerEvents = "none";
+  buttonElement.style.border = "";
 }
 
 function getCart() {
