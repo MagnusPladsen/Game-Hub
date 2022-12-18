@@ -12,7 +12,6 @@ if (sessionStorage.getItem("cart")) {
 function addToCart(productId, buttonElement) {
   cart.push(productId);
   sessionStorage.setItem("cart", JSON.stringify(cart));
-  console.log(window.sessionStorage.getItem("cart"));
   buttonElement.innerHTML = `Added to Cart!`;
   buttonElement.style.backgroundColor = "gray";
   buttonElement.style.cursor = "default";
