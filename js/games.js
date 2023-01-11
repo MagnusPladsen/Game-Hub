@@ -84,9 +84,25 @@ if (sessionStorage.getItem("games")) {
   // Games already cached in sessionStorage, show from cache
   const getGames = JSON.parse(sessionStorage.getItem("games"));
   displayGames(getGames);
+  console.log(getGames)
 } else {
   // First time loading page, fetch games and cache to sessionStorage
   fetchGames();
   const getGames = JSON.parse(sessionStorage.getItem("games"));
   displayGames(getGames);
 }
+
+
+// DETTE MANGLER
+// If you have a ‘Featured’ section, find a way to flag ‘Featured items’ on WordPress and pull that onto your pages
+// If you have filters or sorts on your website, try sorting through the results you’re getting back from the API. 
+
+
+// Submission 
+// By the end of the CA, you will: 
+// have installed WordPress on a web host and created a list of products 
+// be making an API call to fetch the products to your cross-course project
+// be using query strings to let the user click to view an individual product. 
+// You need to complete all of the above to receive a passing grade. 
+// 
+// Submit a link to your updated website. 
