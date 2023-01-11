@@ -1,8 +1,8 @@
-import { games } from "./gamesData.js";
-
 const gamesInCart = document.querySelector(".games-in-cart");
 
 const cart = [];
+
+const games = JSON.parse(sessionStorage.getItem("games"));
 
 if (sessionStorage.getItem("cart")) {
   const getCart = JSON.parse(sessionStorage.getItem("cart"));
@@ -26,10 +26,14 @@ function getCart() {
 
 function removeFromCart(gameId) {
   const updatedCart = JSON.parse(getCart());
-  const gameIndex = updatedCart.findIndex(id => id === gameId);
+  const gameIndex = updatedCart.findIndex((id) => id === gameId);
   updatedCart.splice(gameIndex, 1);
   sessionStorage.setItem("cart", JSON.stringify(updatedCart));
   displaycart();
+}
+
+function getFirstTwo(number) {
+  return number.slice(0, 2);
 }
 
 // check if we are on the cart page
@@ -39,11 +43,11 @@ function displaycart() {
     if (updatedCart != undefined) {
       gamesInCart.innerHTML = "";
       updatedCart.forEach((gameId) => {
-        const game = games[gameId];
+        const game = games.find((game) => game.id == gameId);
         gamesInCart.innerHTML += `
     <div class="game-in-cart">
       <div class="game-in-cart-image">
-        <img src="${game.image}" alt="${game.name}">
+        <img src="${game.images[0].src}" alt="${game.name}">
       </div>
       <div class="game-in-cart-info">
         <div class="game-in-cart-info-row1">
@@ -51,7 +55,7 @@ function displaycart() {
           <p class="game-in-cart-description">${game.description}</p>
         </div>
         <div class="game-in-cart-info-row2">
-          <p class="game-in-cart-price">$ ${game.price}</p>
+          <p class="game-in-cart-price">$ ${getFirstTwo(game.prices.price)}</p>
           <button class="game-in-cart-button cta remove-from-cart" id="${gameId}">Remove</button>
         </div>
       </div>

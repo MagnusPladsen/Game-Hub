@@ -1,50 +1,92 @@
 import { addToCart, cart } from "./cart.js";
-import { games } from "./gamesData.js";
+
+const url = "https://www.gameapi.magnuspladsen.no/wp-json/wc/store/products";
 
 const addToCartButton = document.getElementById("add-to-cart");
 const gamesContainer = document.getElementById("games-container");
 const gameContainer = document.getElementById("game-container");
 const gameHeader = document.getElementById("header");
 
-function displayGames() {
-  Object.keys(games).forEach((gameId) => {
-    const game = games[gameId];
-    gamesContainer.innerHTML += `
-        <div class="game-display">
-            <a href="./games-info.html?id=${gameId}">
-            <p class="display-title">${game.name}</p>
-            <img src="${game.image}" alt="Image of the ${game.name} game" />
-            <p class="display-price">Price: <strong>$${game.price}</strong></p>
-            </a>
-        </div>`;
-  });
+async function fetchGames() {
+  const response = await fetch(url);
+  const data = await response.json();
+  sessionStorage.setItem("games", JSON.stringify(data));
 }
 
-if (gamesContainer) {
-  displayGames();
-  displayGames();
-  displayGames();
-  displayGames();
+function getFirstTwo(number) {
+  return number.slice(0, 2);
 }
 
-if (gameContainer) {
-  const gameId = new URLSearchParams(window.location.search).get("id");
-  const game = games[gameId];
-  gameContainer.innerHTML = `
-    <div class="left-column">
-        <img src="${game.image}" alt="Image of the ${game.name} game" />
-    </div>
-    <div class="right-column">
-        <p class="game-info"><span class="bold">AGE RATING:</span> ${game.ageRating}</br>
-        <span class="bold">PLATFORM:</span> ${game.platform} </br>
-        <span class="bold">CONDITION:</span> ${game.condition} </br>
-        <span class="bold">PRICE:</span> $${game.price}</p>
-        <p class="game-description">${game.description}</p>
-    </div>`;
+function displayGames(gamesArray) {
+  // if on games page
+  if (gamesContainer) {
+    gamesArray.forEach((game) => {
+      gamesContainer.innerHTML += `
+          <div class="game-display">
+              <a href="./games-info.html?id=${game.id}">
+              <p class="display-title">${game.name}</p>
+              <img src="${game.images[0].src}" alt="Image of the ${
+        game.name
+      } game" />
+              <p class="display-price">Price: <strong>$${getFirstTwo(
+                game.prices.price
+              )}</strong></p>
+              </a>
+          </div>`;
+    });
+  } else if (gameContainer) {
+    // if on game info page
+    const gameId = new URLSearchParams(window.location.search).get("id");
+    const game = gamesArray.find((game) => game.id == gameId);
+    gameContainer.innerHTML = `
+      <div class="left-column">
+          <img src="${game.images[0].src}" alt="Image of the ${
+      game.name
+    } game" />
+      </div>
+      <div class="right-column">
+          <p class="game-info"><span class="bold">${
+            game.attributes.find((attribute) => attribute.name === "Age Rating")
+              .name
+          }:</span> ${
+      game.attributes.find((attribute) => attribute.name === "Age Rating")
+        .terms[0].name
+    }</p>
+          <p class="game-info"><span class="bold">${
+            game.attributes.find((attribute) => attribute.name === "Platform")
+              .name
+          }:</span> ${
+      game.attributes.find((attribute) => attribute.name === "Platform")
+        .terms[0].name
+    } </p>
+          <p class="game-info"><span class="bold">${
+            game.attributes.find((attribute) => attribute.name === "Condition")
+              .name
+          }:</span> ${
+      game.attributes.find((attribute) => attribute.name === "Condition")
+        .terms[0].name
+    } </p>
+          <p class="game-info"><span class="bold">PRICE:</span> $${getFirstTwo(
+            game.prices.price
+          )}</p>
+          <p class="game-description">${game.description}</p>
+      </div>`;
     gameHeader.innerHTML = `
-    ${game.name.toUpperCase()}`
-  addToCartButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    addToCart(gameId, addToCartButton);
-  });
+      ${game.name.toUpperCase()}`;
+    addToCartButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      addToCart(gameId, addToCartButton);
+    });
+  }
+}
+
+if (sessionStorage.getItem("games")) {
+  // Games already cached in sessionStorage, show from cache
+  const getGames = JSON.parse(sessionStorage.getItem("games"));
+  displayGames(getGames);
+} else {
+  // First time loading page, fetch games and cache to sessionStorage
+  fetchGames();
+  const getGames = JSON.parse(sessionStorage.getItem("games"));
+  displayGames(getGames);
 }
