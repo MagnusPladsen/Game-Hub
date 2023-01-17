@@ -1,10 +1,14 @@
 import { addToCart, cart } from "./cart.js";
 
-const url = "https://www.gameapi.magnuspladsen.no/wp-json/wc/store/products";
+/* const url = "https://www.gameapi.magnuspladsen.no/wp-json/wc/store/products"; */
+
+const baseUrl = `https://www.gameapi.magnuspladsen.no/wp-json/wc/v3/products`
 
 const consumerKey = "ck_f96a912e5559de0b44079cab28505840ef53051a";
 
 const consumerSecret = "cs_a7140b28c38e1a037d5e2db1b3b7ad0acf516ccf";
+
+const url = `${baseUrl}?consumer_key=${consumerKey}&consumer_secret=${consumerSecret}`;
 
 const addToCartButton = document.getElementById("add-to-cart");
 const gamesContainer = document.getElementById("games-container");
