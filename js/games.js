@@ -16,9 +16,12 @@ const gameContainer = document.getElementById("game-container");
 const gameHeader = document.getElementById("header");
 
 async function fetchGames() {
+  gamesContainer.innerHTML = '<h1>Loading...</h1>';
   const response = await fetch(url);
   const data = await response.json();
   sessionStorage.setItem("games", JSON.stringify(data));
+  gamesContainer.innerHTML = "";
+  displayGames(data);
 }
 
 function displayGames(gamesArray) {
@@ -50,21 +53,21 @@ function displayGames(gamesArray) {
               .name
           }:</span> ${
       game.attributes.find((attribute) => attribute.name === "Age Rating")
-        .name
+        .options[0]
     }</p>
           <p class="game-info"><span class="bold">${
             game.attributes.find((attribute) => attribute.name === "Platform")
               .name
           }:</span> ${
       game.attributes.find((attribute) => attribute.name === "Platform")
-        .name
+        .options[0]
     } </p>
           <p class="game-info"><span class="bold">${
             game.attributes.find((attribute) => attribute.name === "Condition")
               .name
           }:</span> ${
       game.attributes.find((attribute) => attribute.name === "Condition")
-        .name
+        .options[0]
     } </p>
           <p class="game-info"><span class="bold">PRICE:</span> $${
             game.price
@@ -83,10 +86,10 @@ function displayGames(gamesArray) {
 if (sessionStorage.getItem("games")) {
   // Games already cached in sessionStorage, show from cache
   const getGames = JSON.parse(sessionStorage.getItem("games"));
+  console.log("Games fetched from cache")
   displayGames(getGames);
 } else {
   // First time loading page, fetch games and cache to sessionStorage
   fetchGames();
-  const getGames = JSON.parse(sessionStorage.getItem("games"));
-  displayGames(getGames);
+  console.log("Games fetched from API")
 }
