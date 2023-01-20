@@ -55,7 +55,7 @@ function displaycart() {
           <p class="game-in-cart-description">${game.description}</p>
         </div>
         <div class="game-in-cart-info-row2">
-          <p class="game-in-cart-price">$ ${getFirstTwo(game.prices.price)}</p>
+          <p class="game-in-cart-price">$ ${game.price}</p>
           <button class="game-in-cart-button cta remove-from-cart" id="${gameId}">Remove</button>
         </div>
       </div>
