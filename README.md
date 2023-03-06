@@ -1,16 +1,42 @@
-# Game Hub
- This is for my school project.
+# Cross Course Project
 
-    The home page should:
-Be responsive across screen sizes
-Use neat and semantic HTML
-Have CSS that follows the DRY principle
+![image](https://api.pikwy.com/web/640635f2d0c8080e0f0b2f86.jpg)
+
+This is for the first semester project on my school.
+
+## Description 
+
+This is a homepage belonging to a fake game store.
+
+We were only allowed to use HTML, CSS and vanilla JS.
+
+The games are comming from a Headless WP API.
+
+## Built With
+
+- HTML
+- CSS
+- JS
+
+## Getting Started
+
+### Installing
+
+This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
+
+1. Clone the repo:
+
+```bash
+git clone git@github.com:MagnusPladsen/GameHub.git
+```
+
+### Running
+
+To run the app, open up the "index.html" file in your browser of choice.
 
 
-    Level 1 Process
-Create the HTML for your home page. Use HTML5 elements where appropriate and remember to write unique titles and meta descriptions for the page, as well as ensure your pages are WCAG compliant.
-Create a CSS file which is linked to your home page.
-Consider how your page will look across various screen sizes (eg. Single column on mobile, multi-column on larger screens).
-Write your CSS following the DRY principle.
-Ensure you’re making regular commits to your repository. You must use the repository you created on GitHub Classroom in Web and Communications Technology. Remember, you can view the files locally on your computer before your push changes to your repository.
-Submit a link to the deployed site on Netlify.
+## Contact
+
+This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
+
+[My LinkedIn page](https://www.linkedin.com/in/magnus-pladsen-1a2738226/)
